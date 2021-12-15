@@ -1,0 +1,133 @@
+using System;
+
+namespace _12._5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {                                                                      //Каждый год меняется животное, каждые 12 лет - цвет
+            int n;// Объявление переменных
+            Console.Write("Введите год: ");// Ввод исходныхданных
+            n = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Год ");
+
+            // Проверка условий
+            if ((n % 5) == 4)
+            {
+                Console.Write("Зелёной(ого) ");
+
+            }
+            else
+            {
+                if ((n % 5) == 0)
+                {
+                    Console.Write("Красной(ого) ");
+                }
+                else
+                {
+                    if ((n % 5) == 1)
+                    {
+                        Console.Write("Желтой(ого) ");
+                    }
+                    else
+                    {
+                        if ((n % 5) == 2)
+                        {
+                            Console.Write("Белой(ого) ");
+                        }
+                        else
+                        {
+                            if ((n % 5) == 3)
+                            {
+                                Console.Write("Черной(ого) ");
+                            }
+                        }
+                    }
+                }
+            }
+
+            if ((n % 12) == 4)
+            {
+                Console.Write("Крысы");
+            }
+            else
+            {
+                if ((n % 12) == 5)
+                {
+                    Console.Write("Коровы");
+                }
+                else
+                {
+                    if ((n % 12) == 6)
+                    {
+                        Console.Write("Тигра");
+                    }
+                    else
+                    {
+                        if ((n % 12) == 7)
+                        {
+                            Console.Write("Зайца");
+                        }
+                        else
+                        {
+                            if ((n % 12) == 8)
+                            {
+                                Console.Write("Дракона");
+                            }
+                            else
+                            {
+                                if ((n % 12) == 9)
+                                {
+                                    Console.Write("Змеи");
+                                }
+                                else
+                                {
+                                    if ((n % 12) == 10)
+                                    {
+                                        Console.Write("Лошади");
+                                    }
+                                    else
+                                    {
+                                        if ((n % 12) == 11)
+                                        {
+                                            Console.Write("Овцы");
+                                        }
+                                        else
+                                        {
+                                            if (((n % 12) == 12) || ((n % 12) == 0))
+                                            {
+                                                Console.Write("Обезьяны");
+                                            }
+                                            else
+                                            {
+                                                if (((n % 12) == 13) || ((n % 12) == 1))
+                                                {
+                                                    Console.Write("Курицы");
+                                                }
+                                                else
+                                                {
+                                                    if (((n % 12) == 14) || ((n % 12) == 2))
+                                                    {
+                                                        Console.Write("Собаки");
+                                                    }
+                                                    else
+                                                    {
+                                                        if (((n % 12) == 15) || ((n % 12) == 3))
+                                                        {
+                                                            Console.Write("Свиньи");
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

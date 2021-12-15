@@ -1,0 +1,74 @@
+using System;
+
+namespace _12._4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+        string [] sot = new[] { "cто", "двести", "триста", "четыреста", "пятьсот", "шестьсот", "семьсот", "восемьсот", "девятьсот" };
+        string []  des = new[] {"десять", "двадцать", "тридцать", "сорок", "пятьдесят", "шестьдесят", "семьдесят", "восемьдесят", "девяносто" };
+        string [] ed = new[] {"один", "два", "три", "четыре", "пять", "шесть", "семь", "восемь", "девять" };
+        string [] isk = new[] {"одиннадцать", "двенадцать", "тринадцать", "четырнадцать", "пятнадцать", "шестнадцать", "семнадцать", "восемнадцать", "девятнадцать" };
+
+            Console.WriteLine("Введите число:");
+            var str = Console.ReadLine();
+
+                var n = Int32.Parse(str);
+
+                if (n < 100)
+                {
+                    Console.WriteLine("Ошибка ввода");
+                }
+
+                if (str.Length > 3)
+                {
+                    Console.WriteLine("Ошибка ввода");
+                }
+
+            
+
+            var chars = str.ToCharArray();//копиование знаков в массив
+
+            var i = 0;
+            var num = "";
+
+            foreach (var ch in chars)
+            {
+                int m;
+                switch (i)
+                {
+                    case 0:
+                        m = Int32.Parse(ch.ToString()) - 1;
+                        if (m >= 0)
+                            num += sot[m] + " ";
+                        break;
+                    case 1:
+                        m = Int32.Parse(ch.ToString()) - 1;
+                        if (m >= 0)
+                         num += des[m] + " "; 
+                        
+                        break;
+   //                 case 2:
+    //                    m = Int32.Parse(ch.ToString()) - 1;
+    //                   if (m>9 && m <= 19)
+     //                   { num += isk[m] + " "; }
+      //                 break;
+                        
+                    case 2:
+                        m = Int32.Parse(ch.ToString()) - 1;
+                        if (m >= 0)
+                            num += ed[m] + " ";
+                        break;
+
+                }
+
+                i++;
+            }
+
+            Console.WriteLine(num);
+
+        }
+    }
+}
+
